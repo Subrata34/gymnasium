@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap-v5'
 const Home = () => {
     return (
         <div>
-            <Button variant="success"> submit</Button>
+            <h1>this is home </h1>
         </div>
     )
 }
