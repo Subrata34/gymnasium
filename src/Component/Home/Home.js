@@ -1,9 +1,10 @@
 import React from 'react'
-import { Button } from 'react-bootstrap-v5'
+import Header from '../Header/Header'
 
 const Home = () => {
     return (
         <div>
+            <Header></Header>
             <h1>this is home </h1>
         </div>
     )
