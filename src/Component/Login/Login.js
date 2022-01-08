@@ -2,11 +2,10 @@ import React  from 'react'
 import { Button } from 'react-bootstrap-v5';
 import { Link } from 'react-router-dom';
 import Header from '../Header/Header';
+import useFirebase from '../Hooks/useFirebase';
 
 const Login = () => {
-    const handleGoogleSignIn=()=>{
-
-    }
+    const{signInUsingGoogle}=useFirebase();
     
     return (
         <div>
@@ -27,7 +26,7 @@ const Login = () => {
 
             </form>
             <Button variant="success" style={{textDecoration:"none",width:"300px",margin:"15px",borderRadius:"15px"}}
-             onClick={handleGoogleSignIn}
+             onClick={signInUsingGoogle}
             
             >Google sgin in </Button>
             <br />

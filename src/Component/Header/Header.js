@@ -1,11 +1,13 @@
 import React from 'react'
 import { Button } from 'react-bootstrap-v5'
 import { Link } from 'react-router-dom'
+import useFirebase from '../Hooks/useFirebase'
 
 
 import './Header.css'
 
 const Header = () => {
+    const{user,logOut}=useFirebase();
     return (
         
         <div className='nav '>
@@ -17,7 +19,9 @@ const Header = () => {
                  <Link style={{textDecoration:"none"}} className='items' to ="/team">  <li>Our Team</li></Link> 
                  <Link style={{textDecoration:"none"}} className='items' to ="/register"> <li>Register</li></Link> 
                  <Link style={{textDecoration:"none"}} className='items' to ="/login"> <li>Login</li> </Link> 
-                 <Button>Log out</Button>
+                <span>{user.displayName}</span>
+                <img src={user.photoURL} alt="" />
+                {user?.email &&  <Button onClick={logOut}>Log out</Button>}
             </ul>
             
         </div>
