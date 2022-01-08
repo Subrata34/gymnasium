@@ -1,19 +1,25 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+
+
 import './Header.css'
 
 const Header = () => {
     return (
-        <div>
-            <ul className='nav-bar'>
-                <li> <Link style={{textDecoration:"none"}} to ="/home"> Home</Link> </li>
-                <li> <Link style={{textDecoration:"none"}} to ="/about"> About</Link> </li>
-                <li> <Link style={{textDecoration:"none"}} to ="/package">Package</Link> </li>
-                <li> <Link style={{textDecoration:"none"}} to ="/team"> Our Team</Link> </li>
-                <li> <Link style={{textDecoration:"none"}} to ="/register"> Register</Link> </li>
-                <li> <Link style={{textDecoration:"none"}} to ="/login"> Login</Link> </li>
+        
+        <div className='nav '>
+            
+            <ul className='list'>
+                 <Link style={{textDecoration:"none"}} className='items' to ="/home"><li>Home</li></Link>
+                 <Link style={{textDecoration:"none"}} className='items' to ="/about"> <li>About</li> </Link>
+                 <Link style={{textDecoration:"none"}} className='items' to ="/package"><li>Package</li></Link> 
+                 <Link style={{textDecoration:"none"}} className='items' to ="/team">  <li>Our Team</li></Link> 
+                 <Link style={{textDecoration:"none"}} className='items' to ="/register"> <li>Register</li></Link> 
+                 <Link style={{textDecoration:"none"}} className='items' to ="/login"> <li>Login</li> </Link> 
             </ul>
+            
         </div>
+    
     )
 }
 
