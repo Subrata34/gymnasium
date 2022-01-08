@@ -5,11 +5,16 @@ import Header from '../Header/Header';
 import useFirebase from '../Hooks/useFirebase';
 
 const Login = () => {
-    const{signInUsingGoogle}=useFirebase();
+    const{signInUsingGoogle,user}=useFirebase();
     
     return (
         <div>
             <Header></Header>
+            
+
+            <img src={user.photoURL} alt="" />
+            <br />
+            <span>{user.displayName}</span>
             <h1>Please Login </h1>
             <form action="" >
             <label htmlFor="" style={{fontWeight:"bold",fontSize:"20px"}}>Email Address :</label>

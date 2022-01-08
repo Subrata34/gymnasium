@@ -19,8 +19,8 @@ const Header = () => {
                  <Link style={{textDecoration:"none"}} className='items' to ="/team">  <li>Our Team</li></Link> 
                  <Link style={{textDecoration:"none"}} className='items' to ="/register"> <li>Register</li></Link> 
                  <Link style={{textDecoration:"none"}} className='items' to ="/login"> <li>Login</li> </Link> 
-                <span>{user.displayName}</span>
-                <img src={user.photoURL} alt="" />
+                <p>{user.displayName}</p>
+                
                 {user?.email &&  <Button onClick={logOut}>Log out</Button>}
             </ul>
             
