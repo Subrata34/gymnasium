@@ -1,8 +1,12 @@
 import React  from 'react'
 import { Button } from 'react-bootstrap-v5';
+import { Link } from 'react-router-dom';
 import Header from '../Header/Header';
 
 const Login = () => {
+    const handleGoogleSignIn=()=>{
+
+    }
     
     return (
         <div>
@@ -22,6 +26,18 @@ const Login = () => {
             
 
             </form>
+            <Button variant="success" style={{textDecoration:"none",width:"300px",margin:"15px",borderRadius:"15px"}}
+             onClick={handleGoogleSignIn}
+            
+            >Google sgin in </Button>
+            <br />
+            <Button variant="success" style={{textDecoration:"none",width:"300px",margin:"15px",borderRadius:"15px"}}
+             
+            
+            >Github Sign In </Button>
+            <br />
+            <Link to="/register">New User ?</Link>
+
           
         </div>
     )

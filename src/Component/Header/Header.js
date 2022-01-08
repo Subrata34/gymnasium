@@ -1,4 +1,5 @@
 import React from 'react'
+import { Button } from 'react-bootstrap-v5'
 import { Link } from 'react-router-dom'
 
 
@@ -16,6 +17,7 @@ const Header = () => {
                  <Link style={{textDecoration:"none"}} className='items' to ="/team">  <li>Our Team</li></Link> 
                  <Link style={{textDecoration:"none"}} className='items' to ="/register"> <li>Register</li></Link> 
                  <Link style={{textDecoration:"none"}} className='items' to ="/login"> <li>Login</li> </Link> 
+                 <Button>Log out</Button>
             </ul>
             
         </div>

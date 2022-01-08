@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button } from 'react-bootstrap-v5'
+import { Link } from 'react-router-dom'
 import Header from '../Header/Header'
 
 const Register = () => {
@@ -25,6 +26,7 @@ const Register = () => {
             
 
             </form>
+            <Link to="/login">Already Register ?</Link>
         </div>
     )
 }
